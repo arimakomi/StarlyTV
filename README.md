@@ -2,6 +2,11 @@
 
 A powerful, serverless IPTV web player powered entirely by Cloudflare Workers. It acts as a proxy to bypass CORS issues, manages M3U playlists using Cloudflare KV, and includes a built-in dead-link cleaner!
 
+<p align="center" dir="auto">
+<img width="1920" height="953" alt="MOE IPTV Player" src="https://github.com/user-attachments/assets/c00fdfa1-8027-4d7c-aa8c-5a877c64796c" />
+</p>
+
+
 ## ✨ Features
 * **100% Serverless:** Runs purely on Cloudflare Workers edge network.
 * **CORS Bypass:** Proxies video streams and M3U8 files so they play seamlessly in the browser.
