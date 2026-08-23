@@ -1,5 +1,7 @@
 # 📺 پخش‌کننده Starly TV
 
+🔗 **وب‌سایت:** [starly.me](https://starly.me)
+
 یک پخش‌کننده تحت وب قدرتمند و بدون سرور (Serverless) برای IPTV که کاملاً بر بستر Cloudflare Workers اجرا می‌شود. این سیستم به عنوان یک پروکسی برای دور زدن محدودیت‌های CORS عمل می‌کند، لیست‌پخش‌های M3U را با استفاده از Cloudflare KV مدیریت کرده و دارای یک ابزار داخلی برای پاکسازی لینک‌های خراب (Dead-link cleaner) است!
 
 <p align="center" dir="auto">

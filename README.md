@@ -1,5 +1,7 @@
 # 📺 Starly TV
 
+🔗 **Website:** [starly.me](https://starly.me)
+
 A powerful, serverless IPTV web player powered entirely by Cloudflare Workers. It acts as a proxy to bypass CORS issues, manages M3U playlists using Cloudflare KV, and includes a built-in dead-link cleaner!
 
 <p align="center" dir="auto">

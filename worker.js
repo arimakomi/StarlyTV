@@ -493,7 +493,7 @@ function getCleanerHTML(faviconUrl) {
 <div id="step-1">
 <p class="text-sm text-gray-400 mb-4">Select how you want to provide your M3U playlist:</p>
 <div class="flex gap-2 mb-6">
-<button onclick="setTab('url')" id="tab-url" class="flex-1 py-2 rounded-lg bg-[#2D5BE3] text-white text-sm font-medium transition">URL</button>
+<button onclick="setTab('url')" id="tab-url" class="flex-1 py-2 rounded-lg bg-[#FF0044] text-white text-sm font-medium transition">URL</button>
 <button onclick="setTab('file')" id="tab-file" class="flex-1 py-2 rounded-lg bg-[#272733] text-gray-400 text-sm font-medium transition hover:text-white">File Upload</button>
 <button onclick="setTab('text')" id="tab-text" class="flex-1 py-2 rounded-lg bg-[#272733] text-gray-400 text-sm font-medium transition hover:text-white">Raw Text</button>
 </div>
@@ -501,7 +501,7 @@ function getCleanerHTML(faviconUrl) {
 <input type="text" id="m3u-url" placeholder="https://..." class="w-full bg-[#272733] rounded-xl px-4 py-3.5 text-sm text-white placeholder-gray-500 border border-transparent focus:border-gray-600 focus:outline-none transition-colors">
 </div>
 <div id="input-file" class="mb-6 hidden">
-<input type="file" id="m3u-file" accept=".m3u,.m3u8" class="w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#2D5BE3] file:text-white hover:file:bg-blue-600">
+<input type="file" id="m3u-file" accept=".m3u,.m3u8" class="w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#FF0044] file:text-white hover:file:bg-[#FF3369]">
 </div>
 <div id="input-text" class="mb-6 hidden">
 <textarea id="m3u-text" rows="5" placeholder="#EXTM3U..." class="w-full bg-[#272733] rounded-xl px-4 py-3.5 text-sm text-white placeholder-gray-500 border border-transparent focus:border-gray-600 focus:outline-none transition-colors font-mono text-xs resize-none"></textarea>
@@ -510,7 +510,7 @@ function getCleanerHTML(faviconUrl) {
 <span class="material-icons shrink-0">warning</span>
 <p><strong>Warning:</strong> Testing thousands of channels consumes worker limits and takes time. Please use reduced playlists when possible. Recommended maximum: 500 channels.</p>
 </div>
-<button id="fetch-btn" onclick="fetchAndParse()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3.5 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+<button id="fetch-btn" onclick="fetchAndParse()" class="w-full bg-[#FF0044] hover:bg-[#FF3369] text-white font-semibold py-3.5 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
 <span class="material-icons" style="font-size: 20px;">radar</span> <span>Fetch & Prepare</span>
 </button>
 </div>
@@ -526,7 +526,7 @@ function getCleanerHTML(faviconUrl) {
 </div>
 <div id="progress-container" class="hidden mb-6">
 <div class="w-full bg-[#16161E] border border-[#2A2B36] rounded-full h-3 overflow-hidden">
-<div id="progress-bar" class="bg-blue-500 h-3 rounded-full transition-all duration-300" style="width: 0%"></div>
+<div id="progress-bar" class="bg-[#FF0044] h-3 rounded-full transition-all duration-300" style="width: 0%"></div>
 </div>
 <p class="text-xs text-gray-500 text-center mt-2" id="progress-label">0 / 0</p>
 </div>
@@ -543,7 +543,7 @@ function getCleanerHTML(faviconUrl) {
 <button onclick="downloadM3U()" class="w-full bg-[#272733] hover:bg-gray-600 text-white font-medium py-3 rounded-xl transition flex items-center justify-center gap-2"><span class="material-icons">download</span> Download .m3u File</button>
 <div class="flex gap-2">
 <input type="text" id="save-name" placeholder="Name for Panel Source" class="flex-1 bg-[#272733] rounded-xl px-4 py-3 text-sm text-white focus:outline-none">
-<button onclick="saveToPanel()" class="bg-[#2D5BE3] hover:bg-blue-500 text-white font-medium px-6 py-3 rounded-xl transition">Save to Panel</button>
+<button onclick="saveToPanel()" class="bg-[#FF0044] hover:bg-[#FF3369] text-white font-medium px-6 py-3 rounded-xl transition">Save to Panel</button>
 </div>
 </div>
 </div>
@@ -557,13 +557,13 @@ currentTab=tab;
 ['url','file','text'].forEach(t=>{
 document.getElementById('input-'+t).classList.add('hidden');
 const b=document.getElementById('tab-'+t);
-b.classList.remove('bg-[#2D5BE3]','text-white');
+b.classList.remove('bg-[#FF0044]','text-white');
 b.classList.add('bg-[#272733]','text-gray-400');
 });
 document.getElementById('input-'+tab).classList.remove('hidden');
 const a=document.getElementById('tab-'+tab);
 a.classList.remove('bg-[#272733]','text-gray-400');
-a.classList.add('bg-[#2D5BE3]','text-white');
+a.classList.add('bg-[#FF0044]','text-white');
 }
 async function fetchAndParse(){
 const btn=document.getElementById('fetch-btn');
@@ -809,11 +809,11 @@ box-shadow: 0 0 12px rgba(255,255,255,0.6);
 #stream-error-overlay .err-msg  { color: #fff; font-size: 15px; font-weight: 500; }
 #stream-error-overlay .err-sub  { color: #9CA3AF; font-size: 12px; }
 #stream-error-overlay .err-retry {
-  margin-top: 8px; padding: 10px 24px; background: #2D5BE3; color: #fff;
+  margin-top: 8px; padding: 10px 24px; background: #FF0044; color: #fff;
   border: none; border-radius: 99px; font-size: 13px; font-weight: 600;
   cursor: pointer; transition: background 0.2s;
 }
-#stream-error-overlay .err-retry:hover { background: #4F77F5; }
+#stream-error-overlay .err-retry:hover { background: #FF3369; }
 
 /* Custom adjustments for Plyr styles */
 .plyr {
@@ -822,7 +822,7 @@ box-shadow: 0 0 12px rgba(255,255,255,0.6);
   position: absolute !important;
   top: 0; left: 0;
   z-index: 0;
-  --plyr-color-main: #2D5BE3;
+  --plyr-color-main: #FF0044;
 }
 .plyr__video-wrapper {
   height: 100% !important;
@@ -893,9 +893,9 @@ box-shadow: 0 0 12px rgba(255,255,255,0.6);
 
     #mob-back-btn {
         display: none; position: fixed; bottom: 68px; left: 50%; transform: translateX(-50%);
-        background: #2D5BE3; color: #fff; border: none; border-radius: 99px; padding: 10px 22px;
+        background: #FF0044; color: #fff; border: none; border-radius: 99px; padding: 10px 22px;
         font-size: 13px; font-weight: 600; cursor: pointer; z-index: 40; align-items: center; gap: 6px;
-        box-shadow: 0 4px 20px rgba(45,91,227,0.55); white-space: nowrap;
+        box-shadow: 0 4px 20px rgba(255,0,68,0.55); white-space: nowrap;
     }
     #mob-back-btn.visible { display: flex; }
 }
@@ -975,7 +975,7 @@ body.is-fullscreen #mobile-video-wrap {
                 <p class="text-xs text-gray-500 mt-0.5">Manage your playlists</p>
             </div>
             <div class="flex items-center gap-3">
-                <button onclick="addBlankSource()" class="h-8 px-3 rounded-full bg-[#2D5BE3] hover:bg-blue-500 flex items-center justify-center text-white text-xs font-medium transition-colors gap-1 shadow-sm">
+                <button onclick="addBlankSource()" class="h-8 px-3 rounded-full bg-[#FF0044] hover:bg-[#FF3369] flex items-center justify-center text-white text-xs font-medium transition-colors gap-1 shadow-sm">
                     <span class="material-icons" style="font-size: 16px;">add</span> Add
                 </button>
                 <button onclick="tryCloseSettings()" class="w-8 h-8 rounded-full bg-[#272733] hover:bg-gray-600 flex items-center justify-center text-gray-400 hover:text-white transition-colors">
@@ -989,7 +989,7 @@ body.is-fullscreen #mobile-video-wrap {
         </div>
 
         <div class="p-6 border-t border-[#2A2B36] shrink-0">
-            <button id="save-sources-btn" onclick="saveSources()" class="w-full bg-[#2D5BE3] hover:bg-blue-600 transition-colors font-medium py-3.5 rounded-xl text-sm flex items-center justify-center gap-2 shadow-sm">
+            <button id="save-sources-btn" onclick="saveSources()" class="w-full bg-[#FF0044] hover:bg-[#FF3369] transition-colors font-medium py-3.5 rounded-xl text-sm flex items-center justify-center gap-2 shadow-sm">
                 <span class="material-icons" style="font-size: 18px;">save</span>
                 <span id="save-btn-text">Save & Reload Channels</span>
             </button>
@@ -1944,14 +1944,14 @@ function renderSources() {
         } else if (src.isNew) {
             statusBadge = \`<span class="text-[10px] text-orange-400 bg-orange-500/10 border border-orange-500/20 px-2 py-0.5 rounded shadow-sm font-bold uppercase tracking-wider">Save to Load</span>\`;
         } else {
-            statusBadge = \`<span class="text-[11px] text-[#2D5BE3] bg-[#2D5BE3]/10 border border-[#2D5BE3]/20 px-2 py-0.5 rounded shadow-sm font-bold">\${count}</span>\`;
+            statusBadge = \`<span class="text-[11px] text-[#FF0044] bg-[#FF0044]/10 border border-[#FF0044]/20 px-2 py-0.5 rounded shadow-sm font-bold">\${count}</span>\`;
         }
 
         item.innerHTML = \`
         <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-full \${isEnabled ? 'bg-[#2D5BE3]' : 'bg-gray-600'} flex items-center justify-center text-white text-sm font-bold shrink-0 shadow-inner transition-colors">\${idx + 1}</div>
+            <div class="w-9 h-9 rounded-full \${isEnabled ? 'bg-[#FF0044]' : 'bg-gray-600'} flex items-center justify-center text-white text-sm font-bold shrink-0 shadow-inner transition-colors">\${idx + 1}</div>
             <div class="flex-1 min-w-0">
-                <input class="src-name w-full bg-[#1C1D26] rounded-lg px-3 py-2 text-sm text-white font-medium border border-transparent focus:border-blue-500 focus:outline-none transition-colors"
+                <input class="src-name w-full bg-[#1C1D26] rounded-lg px-3 py-2 text-sm text-white font-medium border border-transparent focus:border-[#FF0044] focus:outline-none transition-colors"
                     value="\${escHtml(src.name)}" placeholder="Source name" data-idx="\${idx}" \${!isEnabled ? 'readonly' : ''}>
             </div>
 
@@ -1959,7 +1959,7 @@ function renderSources() {
                 <input type="checkbox" class="sr-only peer" \${isEnabled ? 'checked' : ''} onchange="toggleSource(\${idx}, this.checked)">
                 <div class="w-11 h-6 bg-[#1C1D26] border border-[#2A2B36] rounded-full peer
                     transition-colors duration-300 ease-in-out
-                    peer-checked:bg-[#2D5BE3] peer-checked:border-[#2D5BE3]
+                    peer-checked:bg-[#FF0044] peer-checked:border-[#FF0044]
                     after:content-[''] after:absolute after:top-[2px] after:left-[2px]
                     after:bg-gray-400 peer-checked:after:bg-white after:rounded-full
                     after:h-5 after:w-5 after:transition-all after:duration-300 after:ease-in-out
@@ -1972,7 +1972,7 @@ function renderSources() {
             </button>
         </div>
         <div class="flex flex-col gap-2">
-            <textarea class="src-url w-full bg-[#1C1D26] rounded-lg px-3 py-2.5 text-[11px] text-gray-400 font-mono border border-transparent focus:border-blue-500 focus:outline-none transition-colors resize-none overflow-hidden"
+            <textarea class="src-url w-full bg-[#1C1D26] rounded-lg px-3 py-2.5 text-[11px] text-gray-400 font-mono border border-transparent focus:border-[#FF0044] focus:outline-none transition-colors resize-none overflow-hidden"
                 rows="2" placeholder="M3U URL" data-idx="\${idx}" \${!isEnabled ? 'readonly' : ''}>\${escHtml(src.url)}</textarea>
 
             <div class="flex items-center justify-between px-1 mt-1">
@@ -2089,9 +2089,9 @@ function toggleSource(idx, isChecked) {
     if (numberCircle) {
         if (isChecked) {
             numberCircle.classList.remove('bg-gray-600');
-            numberCircle.classList.add('bg-[#2D5BE3]');
+            numberCircle.classList.add('bg-[#FF0044]');
         } else {
-            numberCircle.classList.remove('bg-[#2D5BE3]');
+            numberCircle.classList.remove('bg-[#FF0044]');
             numberCircle.classList.add('bg-gray-600');
         }
     }
@@ -2120,7 +2120,7 @@ function toggleSource(idx, isChecked) {
                         '<span class="material-icons text-gray-500" style="font-size: 14px;">format_list_bulleted</span>' +
                         'Channels Loaded' +
                     '</span>' +
-                    '<span class="text-[11px] text-[#2D5BE3] bg-[#2D5BE3]/10 border border-[#2D5BE3]/20 px-2 py-0.5 rounded shadow-sm font-bold">' + count + '</span>';
+                    '<span class="text-[11px] text-[#FF0044] bg-[#FF0044]/10 border border-[#FF0044]/20 px-2 py-0.5 rounded shadow-sm font-bold">' + count + '</span>';
             }
         } else {
             badgeContainer.innerHTML =
