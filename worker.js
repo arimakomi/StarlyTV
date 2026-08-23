@@ -10,8 +10,8 @@ export default {
       const COOKIE_SECRET  = env.COOKIE_SECRET  || "s3t-th1s-1n-env-v4rs";
       const AUTH_COOKIE_NAME    = "iptv_auth_token";
       const AUTH_COOKIE_MAX_AGE = 60 * 60 * 24 * 30;
-      const DEFAULT_M3U_URL     = "https://raw.githubusercontent.com/Mohammad-Aali/MOE-IPTV-Player/main/default-playlist.m3u";
-      const FAVICON_URL         = "https://raw.githubusercontent.com/Mohammad-Aali/MOE-IPTV-Player/main/favicon.svg";
+      const DEFAULT_M3U_URL     = "https://raw.githubusercontent.com/arimakomi/StarlyTV/main/default-playlist.m3u";
+      const FAVICON_URL         = "https://raw.githubusercontent.com/arimakomi/StarlyTV/main/favicon.svg";
 
       // ==========================================
       // 2. AUTH HELPERS
@@ -361,7 +361,7 @@ function getLoginHTML(faviconUrl) {
 <html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Login - MOE IPTV</title>
+<title>Login - Starly TV</title>
 <meta name="robots" content="nofollow, noindex" />
 <link rel="icon" type="image/svg+xml" href="${faviconUrl}">
 <script src="https://cdn.tailwindcss.com"><\/script>
@@ -408,7 +408,7 @@ input { border: none !important; box-shadow: none !important; outline: none !imp
 <rect id="eye-left" x="38" y="44" width="6" height="6" rx="3" fill="#FFFFFF" class="mascot-eye" />
 <rect id="eye-right" x="56" y="44" width="6" height="6" rx="3" fill="#FFFFFF" class="mascot-eye" />
 </svg>
-<h1 class="text-2xl font-semibold tracking-tight">MOE IPTV</h1>
+<h1 class="text-2xl font-semibold tracking-tight">Starly TV</h1>
 <p class="text-sm text-gray-400 mt-2">Enter your password to access</p>
 </div>
 <form id="loginForm" class="space-y-5">
@@ -687,7 +687,7 @@ function getHTML(faviconUrl) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>MOE IPTV Player</title>
+<title>Starly TV</title>
 <meta name="robots" content="nofollow, noindex" />
 <link rel="icon" type="image/svg+xml" href="${faviconUrl}">
 <script src="https://cdn.tailwindcss.com"><\/script>

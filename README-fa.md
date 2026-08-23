@@ -1,9 +1,9 @@
-# 📺 پخش‌کننده MOE IPTV
+# 📺 پخش‌کننده Starly TV
 
 یک پخش‌کننده تحت وب قدرتمند و بدون سرور (Serverless) برای IPTV که کاملاً بر بستر Cloudflare Workers اجرا می‌شود. این سیستم به عنوان یک پروکسی برای دور زدن محدودیت‌های CORS عمل می‌کند، لیست‌پخش‌های M3U را با استفاده از Cloudflare KV مدیریت کرده و دارای یک ابزار داخلی برای پاکسازی لینک‌های خراب (Dead-link cleaner) است!
 
 <p align="center" dir="auto">
-<img width="1920" height="953" alt="MOE IPTV Player" src="https://github.com/user-attachments/assets/c00fdfa1-8027-4d7c-aa8c-5a877c64796c" />
+<img width="1920" height="953" alt="Starly TV" src="https://github.com/user-attachments/assets/c00fdfa1-8027-4d7c-aa8c-5a877c64796c" />
 </p>
 
 ## ✨ ویژگی‌ها
@@ -24,7 +24,7 @@
 ۱. وارد [پیشخوان کلودفلر (Cloudflare Dashboard)](https://dash.cloudflare.com/) خود شوید.
 ۲. از منوی کناری به مسیر **Compute** -> **Workers & Pages** بروید.
 ۳. روی **Create Application** و سپس **Start with Hello World!** کلیک کنید.
-۴. یک نام برای ورکر خود انتخاب کنید (مثلاً `moe-iptv`) و روی **Deploy** کلیک کنید.
+۴. یک نام برای ورکر خود انتخاب کنید (مثلاً `starly-tv`) و روی **Deploy** کلیک کنید.
 ۵. روی **Edit code** کلیک کنید. کدهای پیش‌فرض را پاک کنید، محتوای فایل `worker.js` از همین مخزن را در آن جای‌گذاری کرده و در نهایت روی **Save and deploy** کلیک کنید.
 
 ### ۲. راه‌اندازی Cloudflare KV (فضای ذخیره‌سازی)
